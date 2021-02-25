@@ -6,15 +6,12 @@ function DelayedButton(props) {
 
     function handleClick(event) {
         // console.log(event)
+        // console.log(props.delay)
 
         // event.preventDefault();
-        // console.log(props.delay)
-        setTimeout(() => {
-            event.persist()
-            props.onDelayedClick(event)
-        }, 
-        props.delay)
+        event.persist()
         
+        setTimeout(() => { props.onDelayedClick(event)}, props.delay) 
     }
 
     return (
