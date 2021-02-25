@@ -9,7 +9,7 @@ function DelayedButton(props) {
         // console.log(props.delay)
 
         // event.preventDefault();
-        event.persist()
+        event.persist();
         
         setTimeout(() => { props.onDelayedClick(event)}, props.delay) 
     }
@@ -22,3 +22,5 @@ function DelayedButton(props) {
 }
 
 export default DelayedButton
+
+// WHY DOES THIS NOT PASS THE TESTS WHEN "event.preventDefault();" IS USED ?
